@@ -9,7 +9,7 @@ async function actionBack() {
 
 <template>
   <var-sticky :offset-top="0">
-    <var-app-bar title="AnyPhishing" round>
+    <var-app-bar title="Any Phishing" round>
       <template #left>
         <var-button
           class="left"
