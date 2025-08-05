@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  server_backend:
+    build: src/server/backend/
+    ports:
+      - "8080:8080/tcp"
+    volumes:
+      - dbs:/dist/dbs/
+
+  server_frontend:
+    build: src/server/frontend/
+    ports:
+      - "8000:80/tcp"
+    depends_on:
+      - server_backend
+
+  client_frontend:
+    build: src/client/frontend/
+    ports:
+      - "80:80/tcp"
+    depends_on:
+      - server_backend
+
+volumes:
+  dbs:

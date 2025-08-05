@@ -1,0 +1,43 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wdth' 100;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
+  color: var(--color-text);
+  background-color: var(--color-body);
+  color-scheme: var(--color-scheme);
+}
+
+body .var-popup > .var-popup__content {
+  border-radius: var(--dialog-border-radius);
+}
+
+body .popup {
+  width: var(--dialog-width);
+  margin: var(--space-popup);
+}
+
+body .pagination {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+div#app > main > span.subtitle {
+  display: block;
+  margin-bottom: var(--space-normal);
+}
+
+a {
+  text-decoration: none;
+}
